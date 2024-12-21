@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <VBox spacing="10" BorderPane.alignment="CENTER" style="-fx-background-color: #1E3A8A; -fx-padding: 10px;">
+            <HBox spacing="10">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10" />
+                </padding>
+                <Label text="Téléphone Client:" style="-fx-text-fill: white; -fx-font-size: 14px;" />
+                <TextField fx:id="phoneNumberField" promptText="Entrez le numéro de téléphone" style="-fx-background-color: #ffffff; -fx-border-radius: 5px;" />
+                <Button text="Rechercher" fx:id="searchClientButton" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-radius: 5px;" />
+            </HBox>
+            <HBox spacing="10">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10" />
+                </padding>
+                <Label text="Nom Complet:" style="-fx-text-fill: white; -fx-font-size: 14px;" />
+                <TextField fx:id="fullNameField" editable="false" style="-fx-background-color: #ffffff; -fx-border-radius: 5px;" />
+                <Label text="Adresse:" style="-fx-text-fill: white; -fx-font-size: 14px;" />
+                <TextField fx:id="addressField" editable="false" style="-fx-background-color: #ffffff; -fx-border-radius: 5px;" />
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <VBox spacing="10" style="-fx-padding: 10px;">
+            <HBox spacing="10">
+                <Label text="Article:" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+                <ComboBox fx:id="articleComboBox" promptText="Sélectionnez un article" style="-fx-background-color: #ffffff; -fx-border-radius: 5px;" />
+                <Label text="Prix:" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+                <TextField fx:id="priceField" promptText="Entrez le prix" style="-fx-background-color: #ffffff; -fx-border-radius: 5px;" />
+                <Label text="Quantité:" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+                <TextField fx:id="quantityField" promptText="Entrez la quantité" style="-fx-background-color: #ffffff; -fx-border-radius: 5px;" />
+                <Button text="Ajouter" fx:id="addItemButton" style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-radius: 5px;" />
+            </HBox>
+
+            <!-- Tableau de commande avec des styles améliorés -->
+            <TableView fx:id="orderTable" style="-fx-background-color: #ffffff; -fx-border-radius: 5px; -fx-effect: dropshadow(gaussian, #000000, 10, 0.5, 0, 0);">
+                <columns>
+                    <TableColumn text="Article" fx:id="articleColumn" style="-fx-font-weight: bold;" />
+                    <TableColumn text="Prix" fx:id="priceColumn" style="-fx-font-weight: bold;" />
+                    <TableColumn text="Quantité" fx:id="quantityColumn" style="-fx-font-weight: bold;" />
+                    <TableColumn text="Total" fx:id="totalColumn" style="-fx-font-weight: bold;" />
+                    <TableColumn text="Actions" fx:id="actionsColumn" style="-fx-font-weight: bold;" />
+                </columns>
+                <style>
+                    .table-column-header {
+                        -fx-background-color: #2196F3; /* Blue background for headers */
+                        -fx-text-fill: white;
+                    }
+                    .table-row-cell {
+                        -fx-border-color: #e0e0e0; /* Light border for rows */
+                    }
+                    .table-row-cell:odd {
+                        -fx-background-color: #f1f1f1; /* Light grey background for odd rows */
+                    }
+                    .table-row-cell:even {
+                        -fx-background-color: #ffffff; /* White background for even rows */
+                    }
+                </style>
+            </TableView>
+            
+            <!-- Champ pour afficher le total de la commande -->
+            <HBox spacing="10" style="-fx-padding: 10px;">
+                <Label text="Total Commande:" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #333333;" />
+                <TextField fx:id="totalField" editable="false" style="-fx-background-color: #eeeeee; -fx-border-radius: 5px; -fx-font-weight: bold;" />
+            </HBox>
+        </VBox>
+    </center>
+    <bottom>
+        <HBox spacing="10" alignment="CENTER_RIGHT" style="-fx-background-color: #1E3A8A; -fx-padding: 10px;">
+            <Button text="Sauvegarder Commande" fx:id="saveOrderButton" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-radius: 5px;" />
+            <Button text="Annuler" fx:id="cancelOrderButton" style="-fx-background-color: #FF5722; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-radius: 5px;" />
+        </HBox>
+    </bottom>
+</BorderPane>

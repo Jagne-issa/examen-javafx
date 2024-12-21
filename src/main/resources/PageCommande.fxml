@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <!-- Partie supérieure -->
+    <top>
+        <VBox spacing="10" BorderPane.alignment="CENTER" styleClass="panel">
+            <HBox spacing="10" styleClass="row">
+                <Label text="Téléphone Client:" />
+                <TextField fx:id="phoneNumberField" promptText="Entrez le numéro de téléphone" styleClass="textfield" />
+                <Button text="Rechercher" fx:id="searchClientButton" styleClass="button" />
+            </HBox>
+            <HBox spacing="10" styleClass="row">
+                <Label text="Nom Complet:" />
+                <TextField fx:id="fullNameField" editable="false" styleClass="textfield" />
+                <Label text="Adresse:" />
+                <TextField fx:id="addressField" editable="false" styleClass="textfield" />
+            </HBox>
+        </VBox>
+    </top>
+
+    <!-- Partie centrale -->
+    <center>
+        <VBox spacing="10" styleClass="panel">
+            <HBox spacing="10" styleClass="row">
+                <Label text="Article:" />
+                <ComboBox fx:id="articleComboBox" promptText="Sélectionnez un article" styleClass="combobox" />
+                <Label text="Prix:" />
+                <TextField fx:id="priceField" promptText="Entrez le prix" styleClass="textfield" />
+                <Label text="Quantité:" />
+                <TextField fx:id="quantityField" promptText="Entrez la quantité" styleClass="textfield" />
+                <Button text="Ajouter" fx:id="addItemButton" styleClass="button" />
+            </HBox>
+            <TableView fx:id="orderTable" styleClass="table">
+                <columns>
+                    <TableColumn text="Article" fx:id="articleColumn" />
+                    <TableColumn text="Prix" fx:id="priceColumn" />
+                    <TableColumn text="Quantité" fx:id="quantityColumn" />
+                    <TableColumn text="Total" fx:id="totalColumn" />
+                    <TableColumn text="Actions" fx:id="actionsColumn" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <!-- Partie inférieure -->
+    <bottom>
+        <HBox spacing="10" alignment="CENTER_RIGHT" styleClass="row">
+            <Button text="Sauvegarder Commande" fx:id="saveOrderButton" styleClass="button" />
+            <Button text="Annuler" fx:id="cancelOrderButton" styleClass="button" />
+        </HBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,13 @@
+/root/examen-javafx/examen-javafx/src/main/java/com/issa/services/ArticleService.java
+/root/examen-javafx/examen-javafx/src/main/java/com/issa/entities/Article.java
+/root/examen-javafx/examen-javafx/src/main/java/com/issa/repositories/ClientRepository.java
+/root/examen-javafx/examen-javafx/src/main/java/com/issa/repositories/CommandeRepository.java
+/root/examen-javafx/examen-javafx/src/main/java/com/issa/views/Main.java
+/root/examen-javafx/examen-javafx/src/main/java/com/issa/views/PageCommande.java
+/root/examen-javafx/examen-javafx/src/main/java/com/issa/repositories/ArticleRepository.java
+/root/examen-javafx/examen-javafx/src/main/java/com/issa/services/CommandeService.java
+/root/examen-javafx/examen-javafx/src/main/java/com/issa/entities/Commande.java
+/root/examen-javafx/examen-javafx/src/main/java/com/issa/entities/Client.java
+/root/examen-javafx/examen-javafx/src/main/java/com/issa/services/ClientService.java
+/root/examen-javafx/examen-javafx/src/main/java/com/issa/views/CommandeView.java
+/root/examen-javafx/examen-javafx/src/main/java/com/issa/App.java
